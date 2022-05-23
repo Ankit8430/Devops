@@ -1,0 +1,22 @@
+<apex:page controller="ProductHomPage">
+    <apex:form >
+        <apex:pageBlock title="Product Home Page">
+            <apex:commandButton value="Home" action="{!home}"/>
+            <apex:commandButton value="Referse" action="{!re}"/>
+            <apex:image url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbWqPTmtIgk8Vf_VXcRA3Vm3YhRqB8BmKLTA&usqp=CAU"/>
+        <apex:pageMessages ></apex:pageMessages>
+           <apex:pageBlockSection title="Add Product">
+               <apex:commandButton value="Add Product" action="{!add}"/>
+           </apex:pageBlockSection>
+           <apex:pageBlockSection title="Edit Product">
+               <apex:commandButton value="Edit Product" action="{!doEdit}"/>
+           </apex:pageBlockSection>
+            <apex:pageBlockSection title="Delete Product">
+                <apex:commandButton value="Delete Product" action="{!doDetele}"/>
+           </apex:pageBlockSection>
+            <apex:pageBlockSection title="View Details of Product">
+                <apex:commandButton value="View Product" action="{!view}"/>
+           </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

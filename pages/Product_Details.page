@@ -1,0 +1,27 @@
+<apex:page controller="DisplayQuery">
+    <apex:form >
+        <apex:pageBlock title="Product Details">
+            <apex:image url="https://thumbs.dreamstime.com/b/web-181534964.jpg" width="200px"/>
+                     <apex:commandButton value="Product Home Page" action="{!product}"/>
+                    <apex:commandButton value="Home Page" action="{!home}"/>
+                     <apex:commandButton value="Referse" action="{!re}"/>
+            <apex:inputText label="Product Name" value="{!productName}" onkeyup="doSearch()" html-placeholder="Enter Product Name"/>
+            <apex:actionFunction name="letsrch" action="{!doSearch}" rerender="ss"/>
+            <script>
+            function doSearch()
+            {
+            letsrch();
+            }
+            </script>
+            <apex:pageBlockTable value="{!prod}" var="a" id="ss">
+            <apex:column value="{!a.Name}"/>
+            <apex:column value="{!a.Category__c}"/>
+            <apex:column value="{!a.Category__c}"/>
+            <apex:column value="{!a.Models__c}"/>
+            <apex:column value="{!a.Cost__c}"/>
+            <apex:column value="{!a.Approval_Status__c}"/>
+            <apex:column value="{!a.Units_Available__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

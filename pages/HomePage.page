@@ -1,0 +1,16 @@
+<apex:page controller="Home" >
+    <apex:form >
+    <apex:pageBlock title="E-commerce Management System" >  
+    <apex:pageMessages ></apex:pageMessages>
+            <h1 >Welcome E-Commerce Management System</h1>
+            <apex:commandButton value="Referse" action="{!re}"/>
+            <apex:pageBlockSection title="Product Home Page">
+           <apex:commandButton value="Products" action="{!product}"/>
+           </apex:pageBlockSection>
+        	<apex:image url="https://miro.medium.com/max/1400/1*wRdLGfmxNEGy1VjtrLWQ1Q.jpeg"/>
+            <apex:pageBlockSection title="Order Home Page">
+           <apex:commandButton value="Orders" action="{!order}"/>
+           </apex:pageBlockSection>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>
